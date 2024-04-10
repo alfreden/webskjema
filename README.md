@@ -1,7 +1,7 @@
 # Info om font.
 
-Merk at jeg har fjernet font filene fra prosjektet. Da desse innholder noe "sensetiv informasjon"
-Venliggst legg font filene inn i fonts mappen når du har hentet prosjektet ned lokalt
+Merk at jeg har fjernet font filene fra prosjektet. Da desse innholder noe "sensitiv informasjon"
+Venliggst legg font filen/filene inn i fonts mappen når du har hentet prosjektet ned lokalt.
 
 ## Available Scripts
 
