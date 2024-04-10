@@ -1,0 +1,35 @@
+.pageContainer{
+    max-width: 516px;
+    margin: auto;
+    height: fit-content;
+}
+
+.nameContainer{
+    display: flex;
+    gap: 16px;
+}
+
+.formContainer{
+    width: 250px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .pageContainer{
+        max-width: 100%;
+        margin: 8px;
+    }
+
+    .formContainer{
+        width: 100%;
+    }
+
+    .nameContainer{
+        display: inherit;
+    }
+}

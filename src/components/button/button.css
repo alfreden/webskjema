@@ -1,0 +1,15 @@
+.mainButton {
+    border-radius: 20px;
+    padding: 8px 16px;
+}
+
+.filled {
+    background-color: black;
+    color: white;
+}
+
+.outlined {
+    color: black;
+    background-color: white;
+    font-weight: 600;
+}
