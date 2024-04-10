@@ -21,7 +21,6 @@ interface BilforsikringProps {
 }
 
 const Bilforsikring = ({setModalOpen, modalOpen}: BilforsikringProps): JSX.Element => {
-    const [beregnPris, setBeregnPris] = useState(false);
     const [inputValues, setInputValues] = useState<Form>(emptyForm);
 
     const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
