@@ -3,25 +3,12 @@ import Button from "../../components/button";
 import TextInput from "../../components/textinput";
 import './bilforsikring.css'
 import { isNullOrWhitespace } from "../../_utils/textHandling";
-import { Form } from "../../models/Form";
-import Modal from "../../components/modal";
+import { Form, emptyForm } from "../../models/Form";
+import CenteredMessage from "../../components/modal";
 
-const emptyForm = {
-    registrationNumber: {value: '', valid: true, touched: false}, 
-    bonus: {value: '', valid: true, touched: false}, 
-    birthNumber: {value: '', valid: true, touched: false}, 
-    name: {value: '', valid: true, touched: false}, 
-    lastName: {value: '', valid: true, touched: false}, 
-    email: {value: '', valid: true, touched: false}, 
-}
-
-interface BilforsikringProps {
-    setModalOpen: (value: boolean) => void;
-    modalOpen: boolean; 
-}
-
-const Bilforsikring = ({setModalOpen, modalOpen}: BilforsikringProps): JSX.Element => {
+const Bilforsikring = (): JSX.Element => {
     const [inputValues, setInputValues] = useState<Form>(emptyForm);
+    const [successMessage, setSuccessMessage] = useState(false);
 
     const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value, validity } = event.target;
@@ -54,7 +41,6 @@ const Bilforsikring = ({setModalOpen, modalOpen}: BilforsikringProps): JSX.Eleme
     const checkIfDirty = () => {
         let shouldSend = true;
         const entriesWithErrors = Object.entries(inputValues).map((key) => {
-            console.log(key)
             const formObject = key[1];
             if(!formObject.valid || formObject.value === '') {
                 shouldSend = false;
@@ -79,19 +65,19 @@ const Bilforsikring = ({setModalOpen, modalOpen}: BilforsikringProps): JSX.Eleme
     const submit = () => {
         const shouldSubmit = checkIfDirty()
         if(shouldSubmit){
-            setModalOpen(!modalOpen)
+            setSuccessMessage(!successMessage)
         }        
     }
 
-    if(modalOpen){
+    if(successMessage){
         return (
-            <Modal show={modalOpen} setIsOpen={setModalOpen} > 
+            <CenteredMessage show={successMessage} setIsOpen={setSuccessMessage} > 
                 <div className="pageContainer">
                     <h1>Gratulerer</h1>
                     <b>Du har vunnet 100 000 000 kr!</b>
                     <p>Beløp blir utbetalt direkte til denne nettsidens skaper.</p>
                 </div>
-            </Modal>
+            </CenteredMessage>
         )
     }
 

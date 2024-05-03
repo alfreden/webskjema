@@ -7,7 +7,7 @@ interface ModalProps {
     children?: JSX.Element;
 }
 
-const Modal = ({ setIsOpen, children, show }: ModalProps) => {
+const CenteredMessage = ({ setIsOpen, children, show }: ModalProps) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
 
     return (
@@ -22,4 +22,4 @@ const Modal = ({ setIsOpen, children, show }: ModalProps) => {
     );
 };
 
-export default Modal;
+export default CenteredMessage;

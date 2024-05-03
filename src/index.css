@@ -1,19 +1,19 @@
 body {
   margin: 0;
-  font-family: 'Profilfont-Regular-Web', sans-serif;
+  font-family: 'Open Sans Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
   font-weight: 500;
-  font-family: 'Profilfont-Regular-Web', sans-serif;
+  font-family: 'Open Sans Regular', sans-serif;
 }
 
 @font-face {
-  font-family: 'Profilfont-Regular-Web';
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
-  font-weight: normal;
-  font-size-adjust: from-font;
-  src: local('Profilfont-Regular-Web'), url(./fonts/Profilfont-Regular-Web.woff2) format('woff2');
+  font-variation-settings: "wdth" 100;
+  src: local('Open Sans Regular'), url("https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0d"), format('woff2');
 }

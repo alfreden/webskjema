@@ -12,3 +12,12 @@ export type FormObject = {
     valid: boolean;
     touched: boolean;
 }
+
+export const emptyForm = {
+    registrationNumber: {value: '', valid: true, touched: false}, 
+    bonus: {value: '', valid: true, touched: false}, 
+    birthNumber: {value: '', valid: true, touched: false}, 
+    name: {value: '', valid: true, touched: false}, 
+    lastName: {value: '', valid: true, touched: false}, 
+    email: {value: '', valid: true, touched: false}, 
+}
